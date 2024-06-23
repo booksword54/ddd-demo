@@ -1,4 +1,4 @@
-package xyz.yiming.web.clientobject;
+package xyz.yiming.web.command.clientobject;
 
 /**
  * 订单数据对象

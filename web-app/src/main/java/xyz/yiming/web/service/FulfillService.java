@@ -2,8 +2,8 @@ package xyz.yiming.web.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import xyz.yiming.web.command.OrderFulfillCommandExecutor;
-import xyz.yiming.web.dto.OrderFulfillCommand;
+import xyz.yiming.web.command.executor.OrderFulfillCommandExecutor;
+import xyz.yiming.web.command.OrderFulfillCommand;
 
 @Component
 public class FulfillService {

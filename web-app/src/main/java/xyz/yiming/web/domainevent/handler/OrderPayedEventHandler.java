@@ -1,10 +1,10 @@
-package xyz.yiming.web.event.handler;
+package xyz.yiming.web.domainevent.handler;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import xyz.yiming.web.clientobject.OrderCO;
+import xyz.yiming.web.command.clientobject.OrderCO;
 import xyz.yiming.web.domainevent.OrderPayedEvent;
-import xyz.yiming.web.dto.OrderFulfillCommand;
+import xyz.yiming.web.command.OrderFulfillCommand;
 import xyz.yiming.web.service.FulfillService;
 
 /**

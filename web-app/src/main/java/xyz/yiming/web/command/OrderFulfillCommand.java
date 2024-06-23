@@ -1,6 +1,6 @@
-package xyz.yiming.web.dto;
+package xyz.yiming.web.command;
 
-import xyz.yiming.web.clientobject.OrderCO;
+import xyz.yiming.web.command.clientobject.OrderCO;
 
 /**
  * 发起一个订单履约的命令

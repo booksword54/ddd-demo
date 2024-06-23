@@ -2,7 +2,7 @@ package xyz.yiming.web.consumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import xyz.yiming.web.domainevent.OrderPayedEvent;
-import xyz.yiming.web.event.handler.OrderPayedEventHandler;
+import xyz.yiming.web.domainevent.handler.OrderPayedEventHandler;
 
 /**
  * 订单已支付领域事件的消费者

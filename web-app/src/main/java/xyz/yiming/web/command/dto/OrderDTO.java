@@ -1,13 +1,13 @@
-package xyz.yiming.web.command.clientobject;
+package xyz.yiming.web.command.dto;
 
 /**
  * 订单数据对象
  */
-public class OrderCO {
+public class OrderDTO {
 
     private Long orderId;
 
-    public OrderCO(Long orderId) {
+    public OrderDTO(Long orderId) {
         this.orderId = orderId;
     }
 
@@ -15,7 +15,7 @@ public class OrderCO {
         return orderId;
     }
 
-    public OrderCO setOrderId(Long orderId) {
+    public OrderDTO setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }

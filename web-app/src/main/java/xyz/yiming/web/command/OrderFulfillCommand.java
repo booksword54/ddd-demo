@@ -1,24 +1,24 @@
 package xyz.yiming.web.command;
 
-import xyz.yiming.web.command.clientobject.OrderCO;
+import xyz.yiming.web.command.dto.OrderDTO;
 
 /**
  * 发起一个订单履约的命令
  */
 public class OrderFulfillCommand {
 
-    private OrderCO orderCO;
+    private OrderDTO orderDTO;
 
-    public OrderFulfillCommand(OrderCO orderCO) {
-        this.orderCO = orderCO;
+    public OrderFulfillCommand(OrderDTO orderDTO) {
+        this.orderDTO = orderDTO;
     }
 
-    public OrderCO getOrderCO() {
-        return orderCO;
+    public OrderDTO getOrderCO() {
+        return orderDTO;
     }
 
-    public OrderFulfillCommand setOrderCO(OrderCO orderCO) {
-        this.orderCO = orderCO;
+    public OrderFulfillCommand setOrderCO(OrderDTO orderDTO) {
+        this.orderDTO = orderDTO;
         return this;
     }
 }

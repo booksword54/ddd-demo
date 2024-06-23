@@ -2,7 +2,7 @@ package xyz.yiming.web.domainevent.handler;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import xyz.yiming.web.command.clientobject.OrderCO;
+import xyz.yiming.web.command.dto.OrderDTO;
 import xyz.yiming.web.domainevent.OrderPayedEvent;
 import xyz.yiming.web.command.OrderFulfillCommand;
 import xyz.yiming.web.service.FulfillService;
@@ -19,8 +19,8 @@ public class OrderPayedEventHandler {
     public void handle(OrderPayedEvent orderPayedEvent) {
         // 必须把领域事件，转换为一个command，交给service去路由给对应的executor做一个处理
         Long orderId = orderPayedEvent.getOrderId();
-        OrderCO orderCO = new OrderCO(orderId);
-        OrderFulfillCommand orderFulfillCommand = new OrderFulfillCommand(orderCO);
+        OrderDTO orderDTO = new OrderDTO(orderId);
+        OrderFulfillCommand orderFulfillCommand = new OrderFulfillCommand(orderDTO);
         fulfillService.executeOrderFulfill(orderFulfillCommand);
     }
 }

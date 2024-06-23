@@ -25,7 +25,9 @@ public class OrderFulfillCommandExecutor {
         // 第一步：保存订单，需要去使用履约订单仓储/Gateway进行保存
         OrderDTO orderDTO = orderFulfillCommand.getOrderCO();
         FulfillOrder fulfillOrder = fulfillOrderConverter.convert(orderDTO);
-        // 第二步：通过网关路由到基础设施进行保存
+        // 通过网关路由到基础设施进行保存
         fulfillOrderGateway.save(fulfillOrder);
+
+        // 第二步：预分仓
     }
 }

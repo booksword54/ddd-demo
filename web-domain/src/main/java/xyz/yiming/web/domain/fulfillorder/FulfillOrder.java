@@ -1,5 +1,6 @@
 package xyz.yiming.web.domain.fulfillorder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,7 +9,7 @@ import java.util.List;
  */
 public class FulfillOrder {
 
-    private OrderId orderId;
+    private Long orderId;
 
     private List<FulfillOrderItem> fulfillOrderItems;
 
@@ -22,10 +23,22 @@ public class FulfillOrder {
 
     private LogisticsOrder logisticsOrder;
 
+    public List<String> getSkuCodes() {
+        return new ArrayList<>();
+    }
+
+    public List<Long> getPurchaseCounts() {
+        return new ArrayList<>();
+    }
+
     public void allocateToWarehouse() {
     }
 
     public void allocateToLogisticsCompany() {
+    }
+
+    public Long getOrderId() {
+        return orderId;
     }
 
 }

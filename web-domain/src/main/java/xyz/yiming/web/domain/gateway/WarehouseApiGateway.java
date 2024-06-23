@@ -1,17 +1,18 @@
 package xyz.yiming.web.domain.gateway;
 
-import xyz.yiming.web.domain.warehouse.WareHouses;
+import xyz.yiming.web.domain.warehouse.Warehouses;
 
 import java.util.List;
 
 /**
  * 仓储域的路由接口
+ * 对仓储上下文进行调用
  */
-public interface WareHouseGateway {
+public interface WarehouseApiGateway {
     /**
      * 拿到所有仓库信息
      */
-    WareHouses getAll();
+    Warehouses getAll();
 
     /**
      * 锁定库存

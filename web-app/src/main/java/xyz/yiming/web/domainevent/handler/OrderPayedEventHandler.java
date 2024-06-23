@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import xyz.yiming.web.command.dto.OrderDTO;
 import xyz.yiming.web.domainevent.OrderPayedEvent;
 import xyz.yiming.web.command.OrderFulfillCommand;
-import xyz.yiming.web.service.FulfillService;
+import xyz.yiming.web.application.service.FulfillService;
 
 /**
  * 订单已支付领域事件的具体处理逻辑

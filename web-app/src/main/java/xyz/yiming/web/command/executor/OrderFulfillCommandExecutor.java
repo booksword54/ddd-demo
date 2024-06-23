@@ -5,7 +5,9 @@ import org.springframework.stereotype.Component;
 import xyz.yiming.web.command.OrderFulfillCommand;
 import xyz.yiming.web.command.dto.OrderDTO;
 import xyz.yiming.web.converter.FulfillOrderConverter;
+import xyz.yiming.web.domain.event.OrderInterceptedEvent;
 import xyz.yiming.web.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.web.domain.gateway.DomainEventGateway;
 import xyz.yiming.web.domain.gateway.FulfillOrderGateway;
 import xyz.yiming.web.domain.gateway.RiskControlApiGateway;
 import xyz.yiming.web.domain.service.WarehouseDomainService;
@@ -28,6 +30,9 @@ public class OrderFulfillCommandExecutor {
     @Autowired
     private RiskControlApiGateway riskControlApiGateway;
 
+    @Autowired
+    private DomainEventGateway domainEventGateway;
+
     // 专门负责订单履约流程的编排，把这个流程按照业务战术建模的设计，完成落地开发
     // 可以调用聚合模型的行为、仓储/网关、外界API路由、领域服务
     public void execute(OrderFulfillCommand orderFulfillCommand) {
@@ -45,7 +50,7 @@ public class OrderFulfillCommandExecutor {
         // 第三步：风控拦截
         Boolean riskedControlInterceptResult = riskControlApiGateway.riskControlIntercept(fulfillOrder);
         if (!riskedControlInterceptResult) {
-
+            domainEventGateway.publishOrderInterceptedEvent(new OrderInterceptedEvent());
             return;
         }
 

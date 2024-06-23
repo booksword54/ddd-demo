@@ -1,4 +1,4 @@
-package xyz.yiming.web.gatewayimpl.rpc;
+package xyz.yiming.web.gatewayimpl;
 
 import org.springframework.stereotype.Component;
 import xyz.yiming.web.domain.gateway.WarehouseApiGateway;

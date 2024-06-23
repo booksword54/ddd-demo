@@ -1,6 +1,7 @@
 package xyz.yiming.web.domain.fulfillorder;
 
 import xyz.yiming.web.domain.gateway.FulfillOrderGateway;
+import xyz.yiming.web.domain.logistics.LogisticsOrder;
 import xyz.yiming.web.domain.warehouse.Warehouse;
 
 import java.util.ArrayList;
@@ -29,12 +30,19 @@ public class FulfillOrder {
     // 需要持有 FulfillOrderGateway 需要靠其他人注入进来
     private FulfillOrderGateway fulfillOrderGateway;
 
+    /**
+     * 分配到仓库
+     */
     public void allocateToWarehouse(Warehouse warehouse) {
         // 真正进行分配时，保存履约订单和仓储的分配关系
         fulfillOrderGateway.saveAllocatedWarehouse(this, warehouse);
     }
 
-    public void allocateToLogisticsCompany() {
+    /**
+     * 被分配电子面单
+     */
+    public void allocatedLogisticsOrder(LogisticsOrder logisticsOrder) {
+        fulfillOrderGateway.saveAllocatedLogisticsOrder(this, logisticsOrder);
     }
 
     public List<String> getSkuCodes() {

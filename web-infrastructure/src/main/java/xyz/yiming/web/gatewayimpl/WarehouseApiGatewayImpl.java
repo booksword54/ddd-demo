@@ -1,7 +1,9 @@
 package xyz.yiming.web.gatewayimpl;
 
 import org.springframework.stereotype.Component;
+import xyz.yiming.web.domain.fulfillorder.FulfillOrder;
 import xyz.yiming.web.domain.gateway.WarehouseApiGateway;
+import xyz.yiming.web.domain.warehouse.Warehouse;
 import xyz.yiming.web.domain.warehouse.Warehouses;
 
 import java.util.List;
@@ -22,5 +24,10 @@ public class WarehouseApiGatewayImpl implements WarehouseApiGateway {
     @Override
     public Boolean lockInventory(Long warehouseId, Long orderId, List<String> skuCode, List<Long> inventoryCount) {
         return true;
+    }
+
+    @Override
+    public void sendFulfillOrder(FulfillOrder fulfillOrder, Warehouse warehouse) {
+
     }
 }

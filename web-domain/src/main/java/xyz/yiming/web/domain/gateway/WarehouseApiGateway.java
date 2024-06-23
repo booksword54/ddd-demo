@@ -1,5 +1,7 @@
 package xyz.yiming.web.domain.gateway;
 
+import xyz.yiming.web.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.web.domain.warehouse.Warehouse;
 import xyz.yiming.web.domain.warehouse.Warehouses;
 
 import java.util.List;
@@ -26,4 +28,6 @@ public interface WarehouseApiGateway {
                           Long orderId,
                           List<String> skuCode,
                           List<Long> inventoryCount);
+
+    void sendFulfillOrder(FulfillOrder fulfillOrder, Warehouse warehouse);
 }

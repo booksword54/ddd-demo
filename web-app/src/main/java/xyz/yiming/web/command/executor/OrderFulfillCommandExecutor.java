@@ -7,10 +7,10 @@ import xyz.yiming.web.command.dto.OrderDTO;
 import xyz.yiming.web.converter.FulfillOrderConverter;
 import xyz.yiming.web.domain.event.OrderInterceptedEvent;
 import xyz.yiming.web.domain.fulfillorder.FulfillOrder;
-import xyz.yiming.web.domain.gateway.DomainEventGateway;
-import xyz.yiming.web.domain.gateway.FulfillOrderGateway;
-import xyz.yiming.web.domain.gateway.RiskControlApiGateway;
+import xyz.yiming.web.domain.gateway.*;
+import xyz.yiming.web.domain.service.LogisticsDomainService;
 import xyz.yiming.web.domain.service.WarehouseDomainService;
+import xyz.yiming.web.domain.warehouse.Warehouse;
 
 /**
  * 订单履约命令(流程)的执行器
@@ -33,6 +33,12 @@ public class OrderFulfillCommandExecutor {
     @Autowired
     private DomainEventGateway domainEventGateway;
 
+    @Autowired
+    private LogisticsDomainService logisticsDomainService;
+
+    @Autowired
+    private WarehouseApiGateway warehouseApiGateway;
+
     // 专门负责订单履约流程的编排，把这个流程按照业务战术建模的设计，完成落地开发
     // 可以调用聚合模型的行为、仓储/网关、外界API路由、领域服务
     public void execute(OrderFulfillCommand orderFulfillCommand) {
@@ -45,7 +51,7 @@ public class OrderFulfillCommandExecutor {
 
         // 第二步：预分仓
         // 调用领域服务
-        warehouseDomainService.preAllocateWarehouse(fulfillOrder);
+        Warehouse warehouse = warehouseDomainService.preAllocateWarehouse(fulfillOrder);
 
         // 第三步：风控拦截
         Boolean riskedControlInterceptResult = riskControlApiGateway.riskControlIntercept(fulfillOrder);
@@ -55,8 +61,9 @@ public class OrderFulfillCommandExecutor {
         }
 
         // 第四步：分物流
+        logisticsDomainService.allocateLogistics(fulfillOrder, warehouse);
 
         // 第五步：下发库房
-
+        warehouseApiGateway.sendFulfillOrder(fulfillOrder, warehouse);
     }
 }

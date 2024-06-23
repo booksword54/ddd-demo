@@ -1,6 +1,7 @@
 package xyz.yiming.web.domain.gateway;
 
 import xyz.yiming.web.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.web.domain.logistics.LogisticsOrder;
 import xyz.yiming.web.domain.warehouse.Warehouse;
 
 /**
@@ -11,5 +12,7 @@ public interface FulfillOrderGateway {
     void save(FulfillOrder fulfillOrder);
 
     void saveAllocatedWarehouse(FulfillOrder fulfillOrder, Warehouse warehouse);
+
+    void saveAllocatedLogisticsOrder(FulfillOrder fulfillOrder, LogisticsOrder logisticsOrder);
 
 }

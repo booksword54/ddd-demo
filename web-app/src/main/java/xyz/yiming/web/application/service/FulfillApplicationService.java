@@ -6,7 +6,7 @@ import xyz.yiming.web.command.executor.OrderFulfillCommandExecutor;
 import xyz.yiming.web.command.OrderFulfillCommand;
 
 @Component
-public class FulfillService {
+public class FulfillApplicationService {
 
     @Autowired
     private OrderFulfillCommandExecutor orderFulfillCommandExecutor;

@@ -1,4 +1,4 @@
-package xyz.yiming.web.domain.converter;
+package xyz.yiming.web.converter;
 
 import org.springframework.stereotype.Component;
 import xyz.yiming.web.command.dto.OrderDTO;

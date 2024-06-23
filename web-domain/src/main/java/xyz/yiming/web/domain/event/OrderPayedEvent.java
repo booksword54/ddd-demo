@@ -1,4 +1,4 @@
-package xyz.yiming.web.domainevent;
+package xyz.yiming.web.domain.event;
 
 /**
  * 订单已支付领域事件

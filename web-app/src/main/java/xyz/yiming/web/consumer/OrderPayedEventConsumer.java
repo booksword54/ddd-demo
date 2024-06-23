@@ -17,9 +17,11 @@ public class OrderPayedEventConsumer {
     private OrderPayedEventHandler orderPayedEventHandler;
 
     public void startConsume() {
-        // 通过mq的消费技术，拿到一个个的message
+        // 通过mq的消费技术，拿到一个个的message，一般来说都是json格式的字符串
         // 在这里把message转化为一个个OrderPayedEvent领域事件
         OrderPayedEvent orderPayedEvent = new OrderPayedEvent(1100L);
         orderPayedEventHandler.handle(orderPayedEvent);
+        // 处理mq技术相关的细节，比如说offset的管理，是否进行重试消费，以及其他的一些细节
+
     }
 }

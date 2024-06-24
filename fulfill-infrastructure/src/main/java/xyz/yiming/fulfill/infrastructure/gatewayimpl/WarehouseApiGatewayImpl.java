@@ -1,10 +1,10 @@
 package xyz.yiming.fulfill.infrastructure.gatewayimpl;
 
 import org.springframework.stereotype.Component;
-import xyz.yiming.web.domain.fulfillorder.FulfillOrder;
-import xyz.yiming.web.domain.gateway.WarehouseApiGateway;
-import xyz.yiming.web.domain.warehouse.Warehouse;
-import xyz.yiming.web.domain.warehouse.Warehouses;
+import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.fulfill.domain.gateway.WarehouseApiGateway;
+import xyz.yiming.fulfill.domain.warehouse.Warehouse;
+import xyz.yiming.fulfill.domain.warehouse.Warehouses;
 
 import java.util.List;
 

@@ -3,8 +3,8 @@ package xyz.yiming.fulfill.infrastructure.gatewayimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import xyz.yiming.fulfill.infrastructure.gatewayimpl.mq.RocketMQProducer;
-import xyz.yiming.web.domain.event.OrderInterceptedEvent;
-import xyz.yiming.web.domain.gateway.DomainEventGateway;
+import xyz.yiming.fulfill.domain.event.OrderInterceptedEvent;
+import xyz.yiming.fulfill.domain.gateway.DomainEventGateway;
 
 @Component
 public class DomainEventGatewayImpl implements DomainEventGateway {

@@ -1,10 +1,10 @@
 package xyz.yiming.fulfill.web.consumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import xyz.yiming.web.application.service.FulfillApplicationService;
-import xyz.yiming.web.command.OrderFulfillCommand;
-import xyz.yiming.web.command.dto.OrderDTO;
-import xyz.yiming.web.domain.event.OrderPayedEvent;
+import xyz.yiming.fulfill.application.service.FulfillApplicationService;
+import xyz.yiming.fulfill.application.command.OrderFulfillCommand;
+import xyz.yiming.fulfill.application.command.dto.OrderDTO;
+import xyz.yiming.fulfill.domain.event.OrderPayedEvent;
 
 /**
  * 订单已支付领域事件的消费者

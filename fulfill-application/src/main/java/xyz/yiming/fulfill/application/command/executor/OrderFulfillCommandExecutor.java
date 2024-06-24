@@ -5,11 +5,15 @@ import org.springframework.stereotype.Component;
 import xyz.yiming.fulfill.application.command.dto.OrderDTO;
 import xyz.yiming.fulfill.application.converter.FulfillOrderConverter;
 import xyz.yiming.fulfill.application.command.OrderFulfillCommand;
-import xyz.yiming.web.domain.event.OrderInterceptedEvent;
-import xyz.yiming.web.domain.fulfillorder.FulfillOrder;
-import xyz.yiming.web.domain.service.LogisticsDomainService;
-import xyz.yiming.web.domain.service.WarehouseDomainService;
-import xyz.yiming.web.domain.warehouse.Warehouse;
+import xyz.yiming.fulfill.domain.event.OrderInterceptedEvent;
+import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.fulfill.domain.gateway.DomainEventGateway;
+import xyz.yiming.fulfill.domain.gateway.FulfillOrderGateway;
+import xyz.yiming.fulfill.domain.gateway.RiskControlApiGateway;
+import xyz.yiming.fulfill.domain.gateway.WarehouseApiGateway;
+import xyz.yiming.fulfill.domain.service.LogisticsDomainService;
+import xyz.yiming.fulfill.domain.service.WarehouseDomainService;
+import xyz.yiming.fulfill.domain.warehouse.Warehouse;
 
 /**
  * 订单履约命令(流程)的执行器

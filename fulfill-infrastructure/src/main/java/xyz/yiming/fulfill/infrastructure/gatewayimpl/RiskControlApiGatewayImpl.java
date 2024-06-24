@@ -1,8 +1,8 @@
 package xyz.yiming.fulfill.infrastructure.gatewayimpl;
 
 import org.springframework.stereotype.Component;
-import xyz.yiming.web.domain.fulfillorder.FulfillOrder;
-import xyz.yiming.web.domain.gateway.RiskControlApiGateway;
+import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.fulfill.domain.gateway.RiskControlApiGateway;
 
 @Component
 public class RiskControlApiGatewayImpl implements RiskControlApiGateway {

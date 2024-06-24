@@ -3,10 +3,10 @@ package xyz.yiming.fulfill.infrastructure.gatewayimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import xyz.yiming.fulfill.infrastructure.converter.FulfillOrderDOConverter;
-import xyz.yiming.web.domain.fulfillorder.FulfillOrder;
-import xyz.yiming.web.domain.gateway.FulfillOrderGateway;
-import xyz.yiming.web.domain.logistics.LogisticsOrder;
-import xyz.yiming.web.domain.warehouse.Warehouse;
+import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.fulfill.domain.gateway.FulfillOrderGateway;
+import xyz.yiming.fulfill.domain.logistics.LogisticsOrder;
+import xyz.yiming.fulfill.domain.warehouse.Warehouse;
 import xyz.yiming.fulfill.infrastructure.gatewayimpl.database.FulfillOrderMapper;
 import xyz.yiming.fulfill.infrastructure.gatewayimpl.database.dataobject.FulfillOrderDO;
 

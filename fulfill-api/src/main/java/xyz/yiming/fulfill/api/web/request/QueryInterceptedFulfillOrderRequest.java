@@ -1,4 +1,4 @@
-package xyz.yiming.fulfill.web.controller.request;
+package xyz.yiming.fulfill.api.web.request;
 
 public class QueryInterceptedFulfillOrderRequest {
 }

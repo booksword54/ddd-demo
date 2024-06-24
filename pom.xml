@@ -10,8 +10,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>fulfill-application</module>
+        <module>fulfill-rpc</module>
         <module>fulfill-api</module>
-        <module>fulfill-web</module>
         <module>fulfill-domain</module>
         <module>fulfill-infrastructure</module>
     </modules>

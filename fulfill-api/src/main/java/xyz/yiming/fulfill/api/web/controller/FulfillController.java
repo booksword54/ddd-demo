@@ -1,4 +1,4 @@
-package xyz.yiming.fulfill.web.controller;
+package xyz.yiming.fulfill.api.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,10 +8,10 @@ import xyz.yiming.fulfill.application.command.AuditInterceptedFulfillOrderComman
 import xyz.yiming.fulfill.application.command.dto.InterceptedFulfillOrdersDTO;
 import xyz.yiming.fulfill.application.command.query.InterceptedFulfillOrderQuery;
 import xyz.yiming.fulfill.application.service.FulfillApplicationService;
-import xyz.yiming.fulfill.web.controller.request.AuditInterceptedFulfillOrderRequest;
-import xyz.yiming.fulfill.web.controller.request.QueryInterceptedFulfillOrderRequest;
-import xyz.yiming.fulfill.web.controller.response.AuditInterceptedFulfillOrderResponse;
-import xyz.yiming.fulfill.web.controller.response.QueryInterceptedFulfillOrderResponse;
+import xyz.yiming.fulfill.api.web.request.AuditInterceptedFulfillOrderRequest;
+import xyz.yiming.fulfill.api.web.request.QueryInterceptedFulfillOrderRequest;
+import xyz.yiming.fulfill.api.web.response.AuditInterceptedFulfillOrderResponse;
+import xyz.yiming.fulfill.api.web.response.QueryInterceptedFulfillOrderResponse;
 
 @Controller
 public class FulfillController {

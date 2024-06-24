@@ -3,8 +3,11 @@ package xyz.yiming.fulfill.application.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import xyz.yiming.fulfill.application.command.AuditInterceptedFulfillOrderCommand;
+import xyz.yiming.fulfill.application.command.GetFulfillOrderCommand;
+import xyz.yiming.fulfill.application.command.dto.FulfillOrderDTO;
 import xyz.yiming.fulfill.application.command.dto.InterceptedFulfillOrdersDTO;
 import xyz.yiming.fulfill.application.command.executor.AuditInterceptedFulfillOrderCommandExecutor;
+import xyz.yiming.fulfill.application.command.executor.GetFulfillOrderCommandExecutor;
 import xyz.yiming.fulfill.application.command.executor.InterceptedFulfillOrderQueryExecutor;
 import xyz.yiming.fulfill.application.command.executor.OrderFulfillCommandExecutor;
 import xyz.yiming.fulfill.application.command.OrderFulfillCommand;
@@ -22,6 +25,9 @@ public class FulfillApplicationService {
     @Autowired
     private AuditInterceptedFulfillOrderCommandExecutor auditInterceptedFulfillOrderCommandExecutor;
 
+    @Autowired
+    private GetFulfillOrderCommandExecutor getFulfillOrderCommandExecutor;
+
     /**
      * 应用服务层，驱动命令，执行流程调度
      */
@@ -35,6 +41,10 @@ public class FulfillApplicationService {
 
     public void executeAuditInterceptedFulfillOrderCommand(AuditInterceptedFulfillOrderCommand auditInterceptedFulfillOrderCommand) {
         auditInterceptedFulfillOrderCommandExecutor.execute(auditInterceptedFulfillOrderCommand);
+    }
+
+    public FulfillOrderDTO executeGetFulfillOrderCommand(GetFulfillOrderCommand getFulfillOrderCommand) {
+        return getFulfillOrderCommandExecutor.execute(getFulfillOrderCommand);
     }
 
 }

@@ -56,9 +56,10 @@ public class OrderFulfillCommandExecutor {
         // 调用领域服务
         Warehouse warehouse = warehouseDomainService.preAllocateWarehouse(fulfillOrder);
 
-        // 第三步：风控拦截
+        // 第三步：风控 拦截
         Boolean riskedControlInterceptResult = riskControlApiGateway.riskControlIntercept(fulfillOrder);
         if (!riskedControlInterceptResult) {
+            // 如果风控被拦截了，此时就需要发布订单被拦截的领域事件，通知人工审核
             domainEventGateway.publishOrderInterceptedEvent(new OrderInterceptedEvent());
             return;
         }

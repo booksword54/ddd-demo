@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import xyz.yiming.fulfill.application.command.executor.OrderFulfillCommandExecutor;
 import xyz.yiming.fulfill.application.command.OrderFulfillCommand;
+import xyz.yiming.fulfill.application.command.query.InterceptedFulfillOrderQuery;
 
 @Component
 public class FulfillApplicationService {
@@ -17,4 +18,8 @@ public class FulfillApplicationService {
     public void executeOrderFulfill(OrderFulfillCommand orderFulfillCommand) {
         orderFulfillCommandExecutor.execute(orderFulfillCommand);
     }
+
+    public void executeInterceptedFulfillOrderQuery(InterceptedFulfillOrderQuery interceptedFulfillOrderQuery) {
+    }
+
 }

@@ -1,8 +1,8 @@
-package xyz.yiming.fulfill.domain.fulfillorder;
+package xyz.yiming.fulfill.domain.model.fulfillorder;
 
 import xyz.yiming.fulfill.domain.gateway.FulfillOrderGateway;
-import xyz.yiming.fulfill.domain.logistics.LogisticsOrder;
-import xyz.yiming.fulfill.domain.warehouse.Warehouse;
+import xyz.yiming.fulfill.domain.model.logistics.LogisticsOrder;
+import xyz.yiming.fulfill.domain.model.warehouse.Warehouse;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
-package xyz.yiming.fulfill.domain.logistics;
+package xyz.yiming.fulfill.domain.model.logistics;
 
-import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrder;
-import xyz.yiming.fulfill.domain.warehouse.Warehouse;
+import xyz.yiming.fulfill.domain.model.fulfillorder.FulfillOrder;
+import xyz.yiming.fulfill.domain.model.warehouse.Warehouse;
 
 public class LogisticsCompany {
 

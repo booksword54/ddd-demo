@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import xyz.yiming.fulfill.application.command.GetFulfillOrderCommand;
 import xyz.yiming.fulfill.application.command.dto.FulfillOrderDTO;
-import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.fulfill.domain.model.fulfillorder.FulfillOrder;
 import xyz.yiming.fulfill.domain.gateway.FulfillOrderGateway;
 
 @Component

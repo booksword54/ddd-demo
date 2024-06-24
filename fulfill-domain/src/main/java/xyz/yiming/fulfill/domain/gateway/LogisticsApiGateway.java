@@ -1,6 +1,6 @@
 package xyz.yiming.fulfill.domain.gateway;
 
-import xyz.yiming.fulfill.domain.logistics.LogisticsCompanies;
+import xyz.yiming.fulfill.domain.model.logistics.LogisticsCompanies;
 
 /**
  * Api  RPC网关路由接口

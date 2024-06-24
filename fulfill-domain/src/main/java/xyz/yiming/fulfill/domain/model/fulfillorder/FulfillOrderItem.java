@@ -1,4 +1,4 @@
-package xyz.yiming.fulfill.domain.fulfillorder;
+package xyz.yiming.fulfill.domain.model.fulfillorder;
 
 public class FulfillOrderItem {
 

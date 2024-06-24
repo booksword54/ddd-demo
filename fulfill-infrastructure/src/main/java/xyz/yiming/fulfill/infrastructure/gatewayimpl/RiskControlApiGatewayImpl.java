@@ -1,7 +1,7 @@
 package xyz.yiming.fulfill.infrastructure.gatewayimpl;
 
 import org.springframework.stereotype.Component;
-import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.fulfill.domain.model.fulfillorder.FulfillOrder;
 import xyz.yiming.fulfill.domain.gateway.RiskControlApiGateway;
 
 @Component

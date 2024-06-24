@@ -2,10 +2,10 @@ package xyz.yiming.fulfill.domain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.fulfill.domain.model.fulfillorder.FulfillOrder;
 import xyz.yiming.fulfill.domain.gateway.WarehouseApiGateway;
-import xyz.yiming.fulfill.domain.warehouse.Warehouse;
-import xyz.yiming.fulfill.domain.warehouse.Warehouses;
+import xyz.yiming.fulfill.domain.model.warehouse.Warehouse;
+import xyz.yiming.fulfill.domain.model.warehouse.Warehouses;
 
 /**
  * 仓储领域模型服务

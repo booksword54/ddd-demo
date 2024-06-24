@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import xyz.yiming.fulfill.application.command.dto.InterceptedFulfillOrdersDTO;
 import xyz.yiming.fulfill.application.command.query.InterceptedFulfillOrderQuery;
-import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrder;
+import xyz.yiming.fulfill.domain.model.fulfillorder.FulfillOrder;
 import xyz.yiming.fulfill.domain.gateway.FulfillOrderGateway;
 
 import java.util.List;

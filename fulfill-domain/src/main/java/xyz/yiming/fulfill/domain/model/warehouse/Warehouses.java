@@ -1,6 +1,6 @@
-package xyz.yiming.fulfill.domain.warehouse;
+package xyz.yiming.fulfill.domain.model.warehouse;
 
-import xyz.yiming.fulfill.domain.fulfillorder.DeliveryAddress;
+import xyz.yiming.fulfill.domain.model.fulfillorder.DeliveryAddress;
 
 /**
  * 仓库集合领域模型

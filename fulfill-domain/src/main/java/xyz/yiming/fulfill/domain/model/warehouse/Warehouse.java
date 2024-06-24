@@ -1,7 +1,7 @@
-package xyz.yiming.fulfill.domain.warehouse;
+package xyz.yiming.fulfill.domain.model.warehouse;
 
-import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrder;
-import xyz.yiming.fulfill.domain.fulfillorder.FulfillOrderItem;
+import xyz.yiming.fulfill.domain.model.fulfillorder.FulfillOrder;
+import xyz.yiming.fulfill.domain.model.fulfillorder.FulfillOrderItem;
 import xyz.yiming.fulfill.domain.gateway.WarehouseApiGateway;
 
 import java.util.List;

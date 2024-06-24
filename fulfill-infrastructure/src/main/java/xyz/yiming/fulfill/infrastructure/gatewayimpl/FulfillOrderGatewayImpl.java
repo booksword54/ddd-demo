@@ -46,4 +46,14 @@ public class FulfillOrderGatewayImpl implements FulfillOrderGateway {
         return new ArrayList<>();
     }
 
+    @Override
+    public FulfillOrder getByOrderId(Long orderId) {
+        return null;
+    }
+
+    @Override
+    public Warehouse getAllocatedWarehouse(Long orderId) {
+        return null;
+    }
+
 }

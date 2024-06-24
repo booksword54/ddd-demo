@@ -19,4 +19,8 @@ public interface FulfillOrderGateway {
 
     List<FulfillOrder> queryInterceptedFulfillOrders();
 
+    FulfillOrder getByOrderId(Long orderId);
+
+    Warehouse getAllocatedWarehouse(Long orderId);
+
 }

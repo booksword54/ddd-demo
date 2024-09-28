@@ -1,41 +1,9 @@
-## Adapter层
+web：接口层，controller来组成，直接跟外界进行交互，listener/consumer
 
-web：处理请求的Controller
+client：api、dto/client object
 
-wireless：处理无线端适配
+application service：应用服务层，主要是业务流程编排，service、executor、scheduler、domain event+handler、command+dto/query
 
-wap：处理wap端适配
+domain：aggregate+entity+value object、domain service、business component、gateway/repository -> 把业务模型、业务流程、业务语义，完全用代码还原出来，让代码跟业务吻合，而不是完全从技术角度、数据库角度去设计和写出来的代码
 
-
-## App层
-
-executor：处理request、包括command和query
-
-consumer：处理外部meaages
-
-scheduler：处理定时任务
-
-
-## Domain层
-
-model：领域模型
-
-ability：领域能力，包括DomainService
-
-gateway：领域网关，解耦利器
-
-
-## Infrastructure层
-
-gatewayImpl：网关实现
-
-mapper：MyBatis数据库映射
-
-config：配置信息
-
-
-## Client SDK
-
-api：服务对外透出的API
-
-dto：服务对外的DTO
+infrastructure：基础设施层，do+repository impl，他主要是负责跟具体的基础设施进行交互，跟数据库、MQ、缓存、ES、nosql以及其他的外部的基础设施一类的系统进行一个交互，偏向于技术流的地方，主要就是在这里
